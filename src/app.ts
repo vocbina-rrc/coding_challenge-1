@@ -39,7 +39,15 @@ app.get("/api/v1/players", (req, res) => {
     res.send(playerData);
 });
 
+app.get("/api/v1/players/:id", (req, res) => {
+    playerData([1], ["ShadowStrike"], [15], [5], [28500]);
+    res.send(playerData);
+});
 
+app.get("/api/v1/players/:id/rating", (req, res) =>{
+    playerService(15, 5, 28500);
+    res.send(playerService);
+});
 
 
 // export app and server for testing
